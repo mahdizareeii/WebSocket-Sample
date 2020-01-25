@@ -16,7 +16,7 @@ import java.util.List;
 
 public class MessageAdapter extends BaseAdapter {
 
-    List<JSONObject> messageList = new ArrayList<>();
+    private List<JSONObject> messageList = new ArrayList<>();
 
     @Override
     public int getCount() {

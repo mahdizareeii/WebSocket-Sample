@@ -69,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void addItemToAdapter(JSONObject object) {
         adapter.addItem(object);
+        listView.post(new Runnable() {
+            @Override
+            public void run() {
+                listView.setSelection(adapter.getCount() - 1);
+            }
+        });
     }
 
     private void initWebSocket() {
