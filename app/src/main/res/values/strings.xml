@@ -2,5 +2,6 @@
     <string name="app_name">WebSocket Application</string>
     <string name="send">Send</string>
     <string name="enter_a_message">Enter a message</string>
-    <string name="receivedmessage">ReceivedMessage</string>
+    <string name="receivedMessage">ReceivedMessage</string>
+    <string name="sentMessage">SentMessage</string>
 </resources>
