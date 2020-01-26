@@ -3,8 +3,6 @@ package com.websocket.app.webSocket;
 import android.app.Activity;
 import android.widget.Toast;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -35,22 +33,22 @@ public class WebSocketHelper {
         request = new Request.Builder().url("ws://192.168.1.57:8080").build();
         webSocket = client.newWebSocket(request, new WebSocketListener() {
             @Override
-            public void onClosed(@NotNull WebSocket webSocket, int code, @NotNull String reason) {
+            public void onClosed(WebSocket webSocket, int code, String reason) {
                 super.onClosed(webSocket, code, reason);
             }
 
             @Override
-            public void onClosing(@NotNull WebSocket webSocket, int code, @NotNull String reason) {
+            public void onClosing(WebSocket webSocket, int code, String reason) {
                 super.onClosing(webSocket, code, reason);
             }
 
             @Override
-            public void onFailure(@NotNull WebSocket webSocket, @NotNull Throwable t, @Nullable Response response) {
+            public void onFailure(WebSocket webSocket, Throwable t, Response response) {
                 super.onFailure(webSocket, t, response);
             }
 
             @Override
-            public void onMessage(@NotNull WebSocket webSocket, @NotNull final String text) {
+            public void onMessage(WebSocket webSocket, final String text) {
                 super.onMessage(webSocket, text);
                 activity.runOnUiThread(new Runnable() {
                     @Override
@@ -68,12 +66,12 @@ public class WebSocketHelper {
             }
 
             @Override
-            public void onMessage(@NotNull WebSocket webSocket, @NotNull ByteString bytes) {
+            public void onMessage(WebSocket webSocket, ByteString bytes) {
                 super.onMessage(webSocket, bytes);
             }
 
             @Override
-            public void onOpen(@NotNull WebSocket webSocket, @NotNull Response response) {
+            public void onOpen(WebSocket webSocket, Response response) {
                 super.onOpen(webSocket, response);
                 activity.runOnUiThread(new Runnable() {
                     @Override
